@@ -1,0 +1,44 @@
+// <<===== Семейство и размер шрифта по умолчанию =====>>
+$fontFamily: "Kanit", sans-serif;
+$fontSize: rem(16);
+
+// <<===== Настройки экрана =====>>
+$minWidth: 320; // Минимальная ширина страницы
+$maxWidth: 1920; // Ширина полотна (макета)
+$maxWidthContainer: 750; // Ширина ограничивающего контейнера (0 = нет ограничения)
+$containerPadding: 40; // Общий отступ у контейнера (30 = по 15px слева и справа, 0 = нет отступа)
+
+// <<===== Ширина страбатывания первого брейкпоинта =====>>
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+:root {
+   --black: #252525;
+   --white: #f7f7f7;
+
+   --purple: #6c63ff;
+   --purple-dark: #534cc2;
+   --purple-opacity: rgb(107, 99, 255, 0.2);
+   --purple-light: #c3c1e5;
+
+   --dark: #666;
+   --gray: #cdcdcd;
+}
+
+body.light {
+   --bg-color: var(--white);
+   --text: var(--black);
+   --search-text: var(--purple);
+   --search-placeholder-text: var(--purple-light);
+   --border-color: var(--purple);
+   --note-checked: rgba(37, 37, 37, 0.5);
+   --border-input: var(--purple);
+}
+body.dark {
+   --bg-color: var(--black);
+   --text-color: var(--white);
+   --search-text: var(--white);
+   --search-placeholder-text: var(--dark);
+   --border-color: var(--white);
+   --note-checked: rgba(255, 255, 255, 0.5);
+   --border-input: var(--white);
+}

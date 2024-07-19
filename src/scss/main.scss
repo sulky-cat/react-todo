@@ -1,0 +1,25 @@
+body {
+   background-color: var(--bg-color);
+   color: var(--text-color);
+}
+#root {
+   height: 100%;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+   max-width: rem($containerWidth);
+   margin: 0 auto;
+   padding: rem(40) rem(math.div($containerPadding, 2));
+}
+
+.title {
+   font-weight: 500;
+   font-size: rem(26);
+   line-height: 1.5;
+   text-align: center;
+
+   &:not(:last-child) {
+      margin-bottom: rem(18);
+   }
+}

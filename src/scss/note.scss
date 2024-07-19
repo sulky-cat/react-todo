@@ -1,0 +1,58 @@
+.note {
+   display: flex;
+   align-items: center;
+   column-gap: rem(17);
+   padding: rem(17) 0;
+
+   &:not(:last-child) {
+      border-bottom: 1px solid var(--purple);
+   }
+
+   @media (any-hover: hover) {
+      &:hover {
+         .note__edit,
+         .note__trash {
+            opacity: 1;
+         }
+      }
+   }
+
+   &__text {
+      flex: 1 1 auto;
+
+      .note_checked & {
+         text-decoration: line-through;
+         color: var(--note-checked);
+      }
+   }
+   &__controls {
+      display: flex;
+      column-gap: rem(10);
+   }
+   &__edit,
+   &__trash {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (any-hover: hover) {
+         opacity: 0;
+      }
+   }
+   &__edit {
+      color: var(--gray);
+      @media (any-hover: hover) {
+         &:hover {
+            color: var(--purple);
+         }
+      }
+   }
+   &__trash {
+      color: var(--gray);
+      @media (any-hover: hover) {
+         &:hover {
+            color: #e50000;
+         }
+      }
+   }
+}

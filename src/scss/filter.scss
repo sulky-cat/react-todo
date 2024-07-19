@@ -1,0 +1,81 @@
+.search {
+   position: relative;
+   flex: 1 1 auto;
+
+   input {
+      padding-right: 40px;
+   }
+
+   &__btn {
+      position: absolute;
+      height: rem(38);
+      width: rem(38);
+      top: 0;
+      right: 1px;
+   }
+}
+
+.select {
+   position: relative;
+
+   min-width: 150px;
+   &__active {
+      font-size: rem(18);
+      color: var(--white);
+      text-align: left;
+      border-radius: 5px;
+      border: 2px solid var(--purple);
+      padding: 3px 5px;
+      background-color: var(--purple);
+      width: 100%;
+      height: rem(38);
+      text-transform: uppercase;
+
+      position: relative;
+      z-index: 1;
+
+      &::after {
+         content: "";
+         position: absolute;
+         top: 0px;
+         right: 6px;
+         width: 14px;
+         height: 100%;
+         background: url("../../public/svg/select-arrow.svg") center/contain no-repeat;
+
+         .select_open & {
+            transform: rotate(180deg);
+         }
+      }
+
+      .select_open & {
+         background-color: var(--purple-dark);
+      }
+   }
+   &__items {
+      border-radius: 5px;
+      border: 1px solid var(--purple);
+      background: var(--white);
+
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+
+      display: none;
+
+      .select_open & {
+         display: block;
+      }
+   }
+   &__item {
+      color: var(--purple);
+      padding: 4px 6px;
+      cursor: pointer;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: var(--purple-opacity);
+         }
+      }
+   }
+}

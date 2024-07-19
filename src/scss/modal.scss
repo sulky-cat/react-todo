@@ -1,0 +1,85 @@
+.modal {
+   position: fixed;
+   z-index: 10;
+   inset: 0;
+   background-color: rgba(37, 37, 37, 0.7);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.4s ease-in-out 0s;
+   overflow: auto;
+
+   &_open {
+      opacity: 1;
+      visibility: visible;
+   }
+
+   &__wrapepr {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__inner {
+      background-color: var(--bg-color);
+      max-width: rem(550);
+      min-height: rem(289);
+      flex: 0 1 rem(550);
+      border-radius: 16px;
+      padding: rem(18) rem(30);
+
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      row-gap: rem(20);
+
+      scale: 0;
+
+      transition: scale 0.4s ease-in-out 0s;
+
+      .modal_open & {
+         scale: 1;
+      }
+
+      .dark & {
+         border: 1px solid var(--white);
+      }
+   }
+
+   &__body {
+      flex: 1 1 auto;
+   }
+
+   &__title {
+      font-size: rem(24);
+      text-transform: uppercase;
+   }
+
+   &__buttons {
+      display: flex;
+      justify-content: space-between;
+      column-gap: rem(20);
+   }
+}
+
+.button {
+   border: 1px solid var(--purple);
+   border-radius: 5px;
+   padding: rem(10) rem(22);
+   font-size: rem(18);
+   text-transform: uppercase;
+
+   &_white {
+      background-color: var(--bg-color);
+      color: var(--purple);
+   }
+
+   &_purple {
+      background-color: var(--purple);
+      color: var(--white);
+   }
+}

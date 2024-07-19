@@ -1,4 +1,4 @@
-import EmptyImg from "../../public/Empty.png";
+import EmptyImg from "/img/Empty.png";
 
 export default function Empty() {
   return (

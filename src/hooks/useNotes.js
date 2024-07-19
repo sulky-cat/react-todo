@@ -2,13 +2,7 @@ import { useEffect, useMemo, useState } from "react"
 
 export function useNotes(searchNote, filter) {
 
-   const [notes, setNotes] = useState([])
-
-   useEffect(() => {
-      const oldNote = JSON.parse(localStorage.getItem('notes'))
-      if (oldNote?.length) setNotes(oldNote)
-   }, [])
-
+   const [notes, setNotes] = useState(JSON.parse(localStorage.getItem('notes')) || [])
 
    useEffect(() => {
       localStorage.setItem('notes', JSON.stringify(notes))

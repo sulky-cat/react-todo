@@ -33,7 +33,7 @@
       outline: -webkit-focus-ring-color auto 1px;
    }
    &:has(input:checked) {
-      background: url("../svg/check.svg") center 30% / auto no-repeat var(--purple);
+      background: url("/img/svg/check.svg") center 30% / auto no-repeat var(--purple);
    }
 
    input {
